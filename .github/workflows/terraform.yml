@@ -48,4 +48,5 @@ jobs:
         if: github.event_name == 'push'
         run: |
           kubectl create namespace retail-app --dry-run=client -o yaml | kubectl apply -f -
-          kubectl apply -n retail-app -f https://github.com/aws-containers/retail-store-sample-app/releases/latest/download/kubernetes.yaml
+          kubectl apply -n retail-app -f https://github.com/aws-containers/retail-store-sample-app/releases/download/v1.4.0/kubernetes.yaml
+
